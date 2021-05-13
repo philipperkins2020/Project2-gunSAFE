@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS gunsafe_db;
+CREATE DATABASE gunsafe_db;
