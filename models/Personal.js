@@ -1,10 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Inventory extends Model {}
+class Personal extends Model {}
 
 // set up fields and rules for Product model
-Inventory.init(
+Personal.init(
   {
     // define columns
     // Revise after implementing README file
@@ -34,10 +34,10 @@ Inventory.init(
         },
     },
 
-    // serial_number: {
-    //     type: DataTypes.STRING,
-    //     allowNull: false,
-    // },
+    serial_number: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
 
     caliber: {
         type: DataTypes.STRING,
@@ -77,11 +77,11 @@ Inventory.init(
   {
     sequelize,
     timestamps: false,
-    // True for freezeTableName will not add an "s" to modeelName
+    // True for freezeTableName will not add an "s" to modelName
     freezeTableName: true,
     underscored: true,
-    modelName: "inventory",
+    modelName: "personal",
   }
 );
 
-module.exports = Inventory;
+module.exports = Personal;
