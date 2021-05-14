@@ -61,7 +61,7 @@ Personal.init(
     },
 
     sloc: {
-        type: DataTypes.String,
+        type: DataTypes.STRING,
         allowNull: true,
     },
 
@@ -73,7 +73,7 @@ Personal.init(
       },
     },
 
-    user_Id: {
+    user_id: {
       type: DataTypes.INTEGER,
       references: {
         model: "user",
