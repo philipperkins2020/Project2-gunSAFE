@@ -4,7 +4,7 @@ const personalData = [
     {
         manufacturer: "Bushmaster",
         model: "M4-A3",
-        type_id: "Rifle", // This may be a number to reference another table
+        type_id: 1, // This may be a number to reference another table
         serial_number: "987-C8-B1969",
         caliber: 5.56,
         barrel_len: 16,
@@ -16,7 +16,7 @@ const personalData = [
     {
         manufacturer: "Smith & Wesson",
         model: "629",
-        type_id: "Revolver", // This may be a number to reference another table
+        type_id: 6, // This may be a number to reference another table
         serial_number: "123-8A-D1988",
         caliber: 44,
         barrel_len: 6,
@@ -28,7 +28,7 @@ const personalData = [
     {
         manufacturer: "Springfield Armory",
         model: "1911 EMP",
-        type_id: "Revolver", // This may be a number to reference another table
+        type_id: 6, // This may be a number to reference another table
         serial_number: "769-D6-R1889",
         caliber: 9,
         barrel_len: 3,
@@ -40,7 +40,7 @@ const personalData = [
     {
         manufacturer: "Ruger",
         model: "18028",
-        type_id: "Rifle", // This may be a number to reference another table
+        type_id: 2, // This may be a number to reference another table
         serial_number: "424-8A-V4309",
         caliber: "308 Win",
         barrel_len: 20,
