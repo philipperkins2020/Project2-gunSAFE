@@ -29,7 +29,7 @@ Personal.init(
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
-            model: "reference to another table",
+            model: "category",
             key: "id",
         },
     },
@@ -54,7 +54,6 @@ Personal.init(
     action: {
       type: DataTypes.STRING,
       allowNull: true,
-
     },
 
     purchase_date: {
@@ -73,6 +72,14 @@ Personal.init(
         isDecimal: true,
       },
     },
+
+    user_Id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "user",
+        key: "id",
+      },
+    }
   },
   {
     sequelize,
