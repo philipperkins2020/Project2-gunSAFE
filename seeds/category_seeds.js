@@ -2,37 +2,31 @@ const { Category } = require('../models');
 
 const categoryData = [
   {
-    category_name: 'Semi-Automatic Rifle',
+    category_name: 'Rifle',
   },
   {
-    category_name: 'Bolt Action Rifle',
+    category_name: 'Semi-Auto Pistol',
   },
   {
-    category_name: 'Lever Action Rifle',
-  },
-  {
-    category_name: 'Pump Action Rifle',
-  },
-  {
-    category_name: 'Pump Action Shotgun',
-  },
-  {
-    category_name: 'Lever Action Shotgun',
-  },
-  {
-    category_name: 'Semi-Automatic Shotgun',
-  },
-  {
-    category_name: 'Semi-Automatic Handgun/Pistol',
+    category_name: 'Shotgun',
   },
   {
     category_name: 'Revolver',
   },
   {
-    category_name: 'Derringer',
+    category_name: 'Accessory-Frames',
   },
   {
-    category_name: 'Bolt Action Handgun/Pistol',
+    category_name: 'Specialty Handgun',
+  },
+  {
+    category_name: 'Accessory-Receiver Set',
+  },
+  {
+    category_name: 'Muzzleloader',
+  },
+  {
+    category_name: 'Combo',
   },
 ];
 
