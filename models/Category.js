@@ -14,10 +14,15 @@ Category.init(
         category_name: {
             type: DataTypes.STRING,
             allowNull: false,
+            references: {
+                model: 'catalog',
+                key: 'TYPE'
+            }
         },
     }, 
     {
         sequelize,
+        timestamps: false,
         freezeTableName: true,
         underscored: true,
         modelName: 'category',
