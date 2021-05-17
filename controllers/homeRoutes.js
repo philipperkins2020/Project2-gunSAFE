@@ -1,9 +1,11 @@
 const router = require('express').Router()
 const { User } = require('../models');
 
-router.get('/', async (req, res) => {
+router.get('/', (req, res) => {
     try {
-        res.render('homepage');
+        res.render('homepage', {
+            // logged_in: req.seesion.logged_in,
+        });
     } catch (err) {
         res.status(500).json(err);
     }
