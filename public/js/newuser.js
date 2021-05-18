@@ -26,4 +26,4 @@ const newUserForm = async (event) => {
     }
 };
 
-document.getElementById('new-submit').addEventListener('submit', newUserForm);
+document.querySelector('.newuser-form').addEventListener('submit', newUserForm);
