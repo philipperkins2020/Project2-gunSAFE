@@ -1,32 +1,44 @@
-        <div class="row justify-content-center">
-            <div class="card col-10 p-0">
-                <div class="card-header text-white bg-dark">
-                    <h4 class="card-title">Create an account</h4>
-                </div>
-                <div class="card-body">
-                    <form class="form login-form">
-                        <div class="form-group">
-                            <label for="username">Username:</label>
-                            <input class="form-input" type="text" id="username-new"/>
-                        </div>
-                        <div class="form-group">
-                            <label for="email-new">Email:</label>
-                            <input class="form-input" type="text" id="email-new"/>
-                        </div>
-                        <div class="form-group">
-                            <label for="password-new">Password:</label>
-                            <input class="form-input" type="password" id="password-new"/>
-                        </div>
-                        <div class="form-group">
-                            <button class="btn btn-primary" id="new-submit" type="submit">Submit</button>
-                        </div>
-                    </form>
-                    <div>
-                        <h5>Already a User?</h5>
-                        <a href="/login" >Click Here</a>
-                    </div>
-                </div>
-            </div>
+
+<div class="row justify-content-center">
+    <div class="card col-10 p-0">
+        <div class="card-header text-white bg-dark">
+            <h4 class="card-title">Create an account</h4>
         </div>
+        <div class="card-body">
+            <form class="form login-form">
+                <form>
+                    <div class="form-group">
+                        <div class="row mb-3">
+                            <label for="email-new" class="col-sm-2 col-form-label">Email:</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="email-new">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="username-new" class="col-sm-2 col-form-label">Username:</label>
+                            <div class="col-sm-10">
+                                <input type="username" class="form-control" id="username-new">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="password-new" class="col-sm-2 col-form-label">Password:</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="password-new">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3 form-group">
+                        <div class="col-4">
+                        <button class="btn btn-primary" id="new-submit" type="submit">Submit</button>
+                        </div>
+                    </div>
+                </form>
+                <div>
+                  <h5>Already a User?</h5>
+                        <a href="/login" >Click Here</a>
+                </div>
+        </div>
+    </div>
+</div>
 
         <script src="/js/newuser.js"></script>
