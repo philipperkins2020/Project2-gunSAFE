@@ -1,13 +1,40 @@
-<div class="card" style="width: 18rem;">
-  <img src="./images/safe.png" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">mySafe</h5>
-    <p class="card-text">insert name</p>
+<div class="row">
+  <div class="col-6">
+    <div class="card" style="width: 18rem;">
+      <img src="./images/safe.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">mySafe</h5>
+        <p class="card-text">{{user.username}}'s Safe</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><a class="btn btn-primary dropdown-toggle fs-5" href="/" role="button">My
+            Inventory</a></li>
+        <li class="list-group-item"><a class="btn btn-primary fs-5" href="/" role="button">Gun Catalog</a></li>
+        <li class="list-group-item"><a class="btn btn-primary fs-5" href="/" role="button">Add Inventory</a></li>
+      </ul>
+    </div>
   </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item"><a class="btn btn-primary dropdown-toggle fs-5" href="/" role="button">My Inventory</a></li>
-    <li class="list-group-item"><a class="btn btn-primary fs-5" href="/" role="button">Gun Catalog</a></li>
-    <li class="list-group-item"><a class="btn btn-primary fs-5" href="/" role="button">Add Inventory</a></li>
-  </ul>
-  
-</div>
+  <div class="col-6">
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+      {{#if user.personals.length}}
+      {{#each user.personals as |personal| }}
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                {{personal.manufacturer}} {{personal.model}}
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+            </div>
+          </div>
+        {{/each}}
+        {{else}}
+        <div>
+          <h3>You don't have any firearms in your safe.</h3>
+        </div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
