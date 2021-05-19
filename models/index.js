@@ -15,9 +15,9 @@ Category.hasMany(Personal, {
     foreignKey: 'type_id'
 });
 
-Personal.belongsTo(Category, {
-    foreignKey: 'type_id'
-});
+// Personal.belongsTo(Category, {
+//     foreignKey: 'type_id'
+// });
 
 Catalog.belongsTo(Category,  {
     foreignKey: 'category_name'
