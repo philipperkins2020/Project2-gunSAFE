@@ -7,13 +7,13 @@
         <p class="card-text">{{user.username}}'s Safe</p>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item"><a class="btn btn-primary dropdown-toggle fs-5" href="/" role="button">My
-            Inventory</a></li>
+        <li class="list-group-item"><a class="btn btn-primary dropdown-toggle fs-5" href="/" role="button" id="showInventory">My Inventory</a></li>
         <li class="list-group-item"><a class="btn btn-primary fs-5" href="/" role="button">Gun Catalog</a></li>
-        <li class="list-group-item"><a class="btn btn-primary fs-5" href="/" role="button">Add Inventory</a></li>
+        <li class="list-group-item"><a class="btn btn-primary fs-5" href="/" role="button" id="addInventory">Add Inventory</a></li>
       </ul>
-    </div>
+   </div>
   </div>
+
   <div class="col-6">
     <div class="accordion accordion-flush" id="accordionFlushExample">
       {{#if user.personals.length}}
@@ -38,3 +38,5 @@
       </div>
     </div>
   </div>
+
+<script src="/js/mysafe.js"></script>
