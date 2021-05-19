@@ -12,6 +12,7 @@ const personalData = [
         purchase_date: "6 Apr 2010",
         sloc: "Safe",
         cost: 799.99,
+        user_id: 3,
     },
     {
         manufacturer: "Smith & Wesson",
@@ -24,6 +25,7 @@ const personalData = [
         purchase_date: "12 Jun 2008",
         sloc: "Safe",
         cost: 1582.99,
+        user_id: 3,
     },
     {
         manufacturer: "Springfield Armory",
@@ -36,6 +38,7 @@ const personalData = [
         purchase_date: "29 Oct 2020",
         sloc: "Safe",
         cost: 1249.00,
+        user_id: 3,
     },
     {
         manufacturer: "Ruger",
@@ -48,6 +51,7 @@ const personalData = [
         purchase_date: "13 Feb 2017",
         sloc: "Gun Rack",
         cost: 1599.99,
+        user_id: 3,
     },
 
 ];
