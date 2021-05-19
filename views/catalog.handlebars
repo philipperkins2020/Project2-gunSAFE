@@ -1,0 +1,19 @@
+<div class="row">
+        {{#each firearm as |firearm| }}
+        <div class="card" style="width: 18rem;">
+            <img src="https://www.lipseyscloud.com/images/{{firearm.IMAGENAME}}" class="card-img-top" alt="firearm photo">
+            <div class="card-body">
+                <h5 class="card-title">{{firearm.MANUFACTURER}} {{firearm.MODEL}}</h5>
+                <p class="card-text"><strong>Manufacturer Model Number: </strong>{{firearm.MANUFACTURERMODELNO}}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Caliber: </strong>{{firearm.CALIBERGAUGE}}</li>
+                <li class="list-group-item"><strong>Type: </strong>{{firearm.TYPE}}</li>
+                <li class="list-group-item"><strong>Action: </strong>{{firearm.ACTION}}</li>
+                <li class="list-group-item"><strong>Barrel Length: </strong>{{firearm.BARRELLENGTH}}</li>
+            </ul>
+        </div>
+        {{/each}}
+</div>
+
+{{!-- style="width: 20px; height: 20px;" --}}
