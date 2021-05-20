@@ -11,22 +11,24 @@
       <h4>My Inventory</h4>
         {{#if user.personals.length}}
           {{#each user.personals as |personal| }}
-         <button class="btn btn-primary mb-2" href="#" role="button">{{personal.manufacturer}} {{personal.model}}</button>
         <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-</button>
+        <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#firearmModal{{personal.id}}">
+          {{personal.manufacturer}} {{personal.model}}
+        </button>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="firearmModal{{personal.id}}" tabindex="-1" aria-labelledby="firearmModal{{personal.id}}Label" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="firearmModal{{personal.id}}Label">{{personal.manufacturer}} {{personal.model}}</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
+        <p><strong>Serial Number: </strong>{{personal.serial_number}}</p>
+        <p><strong>Caliber: </strong>{{personal.caliber}}</p>
+        <p><strong>Barrel Length: </strong>{{personal.barrel_len}}</p>
+        <p><strong>Action: </strong>{{personal.action}}</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -35,6 +37,7 @@
     </div>
   </div>
 </div>
+
         {{/each}}
         {{else}}
         <div>
