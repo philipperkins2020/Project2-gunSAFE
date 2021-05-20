@@ -3,11 +3,10 @@ const sequelize = require('../config/connection');
 
 class Personal extends Model {}
 
-// set up fields and rules for Product model
+
 Personal.init(
   {
-    // define columns
-    // Revise after implementing README file
+   
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -24,7 +23,6 @@ Personal.init(
         allowNull: false,
     },
 
-    // Pistol, Rifle, Shotgun, Receiver
     type_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
@@ -46,11 +44,9 @@ Personal.init(
 
     barrel_len: {
         type: DataTypes.DECIMAL(5,2),
-        allowNull: false,
-        validate: {
-        isDecimal: true,
-      },
+        allowNull: true,
     },
+
     action: {
       type: DataTypes.STRING,
       allowNull: true,
@@ -58,6 +54,7 @@ Personal.init(
 
     purchase_date: {
         type: DataTypes.DATE,
+        allowNull: true,
     },
 
     sloc: {
@@ -67,11 +64,8 @@ Personal.init(
 
     cost: {
       type: DataTypes.DECIMAL(10,2),
-      allowNull: false,
-      validate: {
-        isDecimal: true,
-      },
-    },
+      allowNull: true,
+  },
 
     user_id: {
       type: DataTypes.INTEGER,

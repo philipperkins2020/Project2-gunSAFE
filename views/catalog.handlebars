@@ -1,3 +1,106 @@
+<div class="row justify-content-center">
+    <div class="col-10">
+        <form class="catalog-search-form">
+            <div class="mb-3">
+                <div class="form-group">
+                    <label for="firearmType">Firearm Type:</label>
+                    <select class="form-select form-select-lg mb-3" id="firearmType" aria-label=".form-select-lg example">
+                        <option selected>select a firearm type..</option>
+                        <option value="1">Rifle</option>
+                        <option value="2">Semi-Auto Pistol</option>
+                        <option value="3">Shotgun</option>
+                        <option value="4">Revolver</option>
+                        <option value="5">Specialty Handgun</option>
+                        <option value="6">Muzzleloader</option>
+                        <option value="7">Combo</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="form-group">
+                    <label for="firearmAction">Firearm Action:</label>
+                    <select class="form-select form-select-lg mb-3" id="firearmAction" aria-label=".form-select-lg example">
+                        <option selected>select a firearm action..</option>
+                        <option value="1">Single Action</option>
+                        <option value="2">Lever Action</option>
+                        <option value="3">Single Shot</option>
+                        <option value="4">Pump Action</option>
+                        <option value="5">Bolt Action</option>
+                        <option value="6">Semi-Auto</option>
+                        <option value="7">Over / Under</option>
+                        <option value="8">Double Action Only</option>
+                        <option value="9">Double / Single Action</option>
+                        <option value="10">Striker Fired</option>
+                        <option value="11">Safe Action</option>
+                        <option value="12">Side By Side</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mb-3">
+                 <div class="form-group">
+                    <label for="firearmCaliber">Firearm Caliber/Gauge:</label>
+                    <select class="form-select form-select-lg mb-3" id="firearmCaliber" aria-label=".form-select-lg example">
+                        <option selected>select a firearm caliber/gauge..</option>
+                        <option value="1">380 ACP</option>
+                        <option value="2">44-40</option>
+                        <option value="3">45 Colt</option>
+                        <option value="4">44 Magnum | 44 Special</option>
+                        <option value="5">38-55 Win</option>
+                        <option value="6">357 Magnum | 38 Special</option>
+                        <option value="7">45-70 GOVT</option>
+                        <option value="8">45-90</option>
+                        <option value="9">44 Magnum</option>
+                        <option value="10">30-30</option>
+                        <option value="11">12 Gauge</option>
+                        <option value="12">20 Gauge</option>
+                        <option value="13">22-250</option>
+                        <option value="14">300 WSM</option>
+                        <option value="15">22 LR</option>
+                        <option value="16">240 WBY Mag</option>
+                        <option value="17">223 Rem</option>
+                        <option value="18">405 Win</option>
+                        <option value="19">30-06</option>
+                        <option value="20">17 WSM</option>
+                        <option value="21">264 Win</option>
+                        <option value="22">7mm Rem Mag</option>
+                        <option value="23">300 Win Mag</option>
+                        <option value="24">6.5 Creedmoor</option>
+                        <option value="25">270 Win</option>
+                        <option value="26">7mm-08</option>
+                        <option value="27">308 Win</option>
+                        <option value="28">243 Win</option>
+                        <option value="29">25-06</option>
+                        <option value="30">257 WBY Mag</option>
+                        <option value="31">300 WBY Mag</option>
+                        <option value="32">270 WSM</option>
+                        <option value="33">22 Magnum</option>
+                        <option value="34">17 HMR</option>
+                        <option value="35">28 Nosler</option>
+                        <option value="36">6.8 Western</option>
+                        <option value="37">280 ACKLY</option>
+                        <option value="38">6.5 PRC</option>
+                        <option value="39">300 PRC</option>
+                        <option value="40">7.62 x 39mm</option>
+                        <option value="41">22 Hornet</option>
+                        <option value="42">222 Rem</option>
+                        <option value="43">6mm Creedmoor</option>
+                        <option value="44">6.5 x 55mm</option>
+                        <option value="45">223 Rem | 5.56 NATO</option>
+                        <option value="46">45 ACP</option>
+                        <option value="47">9mm</option>
+                        <option value="48">7.62 x 51mm | 308 Win</option>
+                        <option value="49">5.45 x 39mm</option>
+                        <option value="50">30-40 Krag</option>
+                        <option value="51">38 Special</option>
+                    </select>
+                </div>
+            </div>
+            <div class="text-center mb-3">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
 <div class="row">
         {{#each firearm as |firearm| }}
         <div class="card" style="width: 18rem;">
@@ -15,5 +118,8 @@
         </div>
         {{/each}}
 </div>
+
+
+<script src="/js/catalog.js"></script>
 
 {{!-- style="width: 20px; height: 20px;" --}}
