@@ -1,4 +1,3 @@
-const { response } = require("express");
 
 const catalogSearch = async (event) => {
     event.preventDefault();
@@ -9,21 +8,17 @@ const catalogSearch = async (event) => {
 
 
     if (type && action && caliber) {
-        const response = await fetch('/catalog', {
-            method: 'GET',
-            body: JSON.stringify({
-                TYPE: type,
-                ACTION: action,
-                CALIBERGAUGE: caliber,
-            }),
-            headers: { 'Content-Type': 'application/json' },
-        });
+        // const response = await fetch(`/catalog/${type}/${action}/${caliber}`, {
+        //     method: 'GET',
+        //     headers: { 'Content-Type': 'application/json' },
+        // });
+        document.location.replace(`/catalog/${type}/${action}/${caliber}`);
     } 
-    if (response.ok) {
+    // if (response.ok) {
 
-    } else {
-        alert(response.statusText);
-    }
+    // } else {
+    //     alert(response.statusText);
+    // }
 };
 
 document.querySelector('.catalog-search-form').addEventListener('submit', catalogSearch);
