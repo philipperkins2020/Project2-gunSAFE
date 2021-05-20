@@ -1,5 +1,5 @@
 
-  
+  <div class="row justify-content-center">
     <div class="card" style= "width: 22rem">
       <img src="./images/safe.png" class="card-img-top" alt="...">
       <div class="card-body">
@@ -11,6 +11,29 @@
         {{#if user.personals.length}}
       {{#each user.personals as |personal| }}
          <button class="btn btn-primary mb-2" href="#" role="button">{{personal.manufacturer}} {{personal.model}}</button>
+        <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
         {{/each}}
         {{else}}
         <div>
@@ -26,7 +49,7 @@
         <li class="list-group-item"><a class="btn btn-primary fs-5" href="/" role="button" id="addInventory">Add Inventory</a></li>
       </ul>
    </div>
-  
+  </div>
 
 
   
