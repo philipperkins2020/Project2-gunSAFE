@@ -1,47 +1,42 @@
-<div class="row">
-  <div class="col-6">
-    <div class="card" style="width: 18rem;">
+
+  
+    <div class="card" style= "width: 22rem">
       <img src="./images/safe.png" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">mySafe</h5>
         <p class="card-text">{{user.username}}'s Safe</p>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item"><a class="btn btn-primary dropdown-toggle fs-5" href="/" role="button" id="showInventory">My Inventory</a></li>
-        <li class="list-group-item"><a class="btn btn-primary fs-5" href="/" role="button">Gun Catalog</a></li>
-        <li class="list-group-item"><a class="btn btn-primary fs-5" href="/" role="button" id="addInventory">Add Inventory</a></li>
-      </ul>
-   </div>
-  </div>
-
-  <div class="col-6">
-    <div class="accordion accordion-flush" id="accordionFlushExample">
-      {{#if user.personals.length}}
+      <h4>My Inventory</h4>
+        {{#if user.personals.length}}
       {{#each user.personals as |personal| }}
-
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingOne">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                {{personal.manufacturer}} {{personal.model}}
-              </button>
-            </h2>
-            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">
-                <p><strong>Serial Number: </strong>{{personal.serial_number}}</p>
-                <p><strong>Caliber: </strong>{{personal.caliber}}</p>
-                <p><strong>Barrel Length: </strong>{{personal.barrel_len}}</p>
-                <p><strong>Action: </strong>{{personal.action}}</p>
-              </div>
-            </div>
-          </div>
+         <button class="btn btn-primary mb-2" href="#" role="button">{{personal.manufacturer}} {{personal.model}}</button>
         {{/each}}
         {{else}}
         <div>
           <h3>You don't have any firearms in your safe.</h3>
         </div>
         {{/if}}
-      </div>
-    </div>
-  </div>
+      
+  
+        
+        
+        </li>
+        <li class="list-group-item"><a class="btn btn-primary fs-5" href="/" role="button">Gun Catalog</a></li>
+        <li class="list-group-item"><a class="btn btn-primary fs-5" href="/" role="button" id="addInventory">Add Inventory</a></li>
+      </ul>
+   </div>
+  
+
+
+  
 
 <script src="/js/mysafe.js"></script>
+{{!-- 
+          <p><strong>Serial Number: </strong>{{personal.serial_number}}</p>
+                <p><strong>Caliber: </strong>{{personal.caliber}}</p>
+                <p><strong>Barrel Length: </strong>{{personal.barrel_len}}</p>
+                <p><strong>Action: </strong>{{personal.action}}</p>
+
+                {{#if user.personals.length}}
+      {{#each user.personals as |personal| }} --}}
