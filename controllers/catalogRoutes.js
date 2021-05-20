@@ -1,13 +1,28 @@
 const router = require('express').Router()
 const { Catalog } = require('../models');
 
+
 router.get('/', async (req, res) => {
+
+    try {
+
+        res.render('catalog');
+
+    } catch (err) {
+        res.status(500).json(err);
+
+    }
+});
+
+
+router.get('/:type/:action/:caliber', async (req, res) => {
+    const { type, action, caliber } = req.params;
     try {
         const catalogData = await Catalog.findAll({
             where: {
-                TYPE: 'Semi-Auto Pistol',
-                CALIBERGAUGE: '9mm',
-                ACTION: 'Double Action Only'
+                TYPE: type,
+                CALIBERGAUGE: caliber,
+                ACTION: action
             }
         });
 
@@ -32,6 +47,6 @@ module.exports = router;
 
 
 
-    // TYPE: req.body.TYPE,
+    // TYPE: req.params.TYPE,
     // CALIBERGAUGE: req.body.CALIBERGAUGE,
     // ACTION: req.body.ACTION
