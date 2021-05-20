@@ -29,3 +29,9 @@ router.get('/', async (req, res) => {
 
 
 module.exports = router;
+
+
+
+    // TYPE: req.body.TYPE,
+    // CALIBERGAUGE: req.body.CALIBERGAUGE,
+    // ACTION: req.body.ACTION

@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const userRoutes = require('./userRoutes');
 // const personalRoutes = require('./personalRoutes');
-// const safetyRoutes = require('./safetyRoutes');
 // const catalogRoutes = require('./catalogRoutes');
 
 router.use('/user', userRoutes);
