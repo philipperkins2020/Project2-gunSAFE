@@ -7,9 +7,10 @@
         <p class="card-text">{{user.username}}'s Safe</p>
       </div>
       <ul class="list-group list-group-flush">
+
       <h4>My Inventory</h4>
         {{#if user.personals.length}}
-      {{#each user.personals as |personal| }}
+          {{#each user.personals as |personal| }}
          <button class="btn btn-primary mb-2" href="#" role="button">{{personal.manufacturer}} {{personal.model}}</button>
         {{/each}}
         {{else}}
@@ -22,13 +23,10 @@
         
         
         </li>
-        <li class="list-group-item"><a class="btn btn-primary fs-5" href="/" role="button">Gun Catalog</a></li>
-        <li class="list-group-item"><a class="btn btn-primary fs-5" href="/" role="button" id="addInventory">Add Inventory</a></li>
+        <li class="list-group-item"><a class="btn btn-primary fs-5" href="/catalog" role="button">Gun Catalog</a></li>
+        <li class="list-group-item"><a class="btn btn-primary fs-5" href="/addinventory" role="button" id="addInventory">Add Inventory</a></li>
       </ul>
    </div>
-  
-
-
   
 
 <script src="/js/mysafe.js"></script>

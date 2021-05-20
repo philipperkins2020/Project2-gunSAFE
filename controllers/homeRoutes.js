@@ -1,5 +1,6 @@
-const router = require('express').Router()
-const { User } = require('../models');
+const router = require('express').Router(); 
+
+const { User, Personal } = require('../models');
 
 router.get('/', (req, res) => {
     try {
@@ -10,9 +11,6 @@ router.get('/', (req, res) => {
         res.status(500).json(err);
     }
 });
-
-
-
 
 
 router.get('/login', (req, res) => {
@@ -42,5 +40,15 @@ router.get('/logout', (req, res) => {
         res.status(204).redirect('/');
     }
 });
+
+router.get('/addinventory', (req, res) => {
+    if (!req.session.logged_in) {
+      res.redirect('/');
+      return;
+    }
+    res.render('addinventory');
+});
+
+
 
 module.exports = router
