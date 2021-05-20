@@ -64,6 +64,7 @@ Catalog.init(
     }, 
     {
         sequelize,
+        timestamps: false,
         freezeTableName: true,
         modelName: 'catalog',
     }
