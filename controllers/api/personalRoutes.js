@@ -16,6 +16,107 @@ router.post('/', withAuth, async  (req, res) => {
     }
 });
 
+// Changes/edits info in the firearm
+router.put('/:id', withAuth, async (req, res) => {
+    try {
+      const persData = await Personal.update(
+        {
+          manufacturer: req.body.manufacturer,
+            model: req.body.model,
+            type_id: req.body.type_id,
+            serial_number: req.body.serial_number,
+            caliber: req.body.caliber,
+            barrel_len: req.body.barrel_len,
+            action: req.body.action,
+            purchase_date: req.body.purchase_date,
+            sloc: req.body.sloc,
+            cost: req.body.cost,
+            user_id: req.body.user_id,
+          // manufacturer: req.body.manufacturer,
+          // model: req.body.model,
+          //This is correct...
+        },
+        {
+          where: {
+            id: req.params.id,
+            user_id: req.session.user_id,
+          },
+        }
+      );
+  
+      if (!persData) {
+        res.status(404).json({ message: 'No guns with this id...' });
+        return;
+      }
+  
+      res.status(200).json(persData);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+
+
+  router.get("/editinventory/:id", withAuth, async (req, res) => {
+    try {
+        const persData = await Personal.findByPk(req.params.id, {
+            attributes: ["id", 
+                        "manufacturer", 
+                        "model", 
+                        "type_id",
+                        "serial_number",
+                        "caliber",
+                        "barrel_len",
+                        "action",
+                        "purchase_date",
+                        "sloc",
+                        "cost",
+                        "user_id",
+                    ],
+            include: [
+                {
+                    model: User,
+                    attributes: ["username"],
+                },
+                
+            ],
+        });
+
+        const post = persData.get({ plain: true });
+
+        res.render("editinventory", { post, logged_in: req.session.logged_in });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 module.exports = router;
 
 // Code written out but works properly
