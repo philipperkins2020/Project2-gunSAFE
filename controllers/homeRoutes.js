@@ -1,12 +1,17 @@
 const router = require('express').Router(); 
 
 const { User, Personal } = require('../models');
+const countapi = require('countapi-js');
 
 router.get('/', (req, res) => {
     try {
+        countapi.visits().then((result) => {
+            console.log(result.value);
         res.render('homepage', {
+            visited: result.value
             // logged_in: req.seesion.logged_in,
         });
+    });
     } catch (err) {
         res.status(500).json(err);
     }
