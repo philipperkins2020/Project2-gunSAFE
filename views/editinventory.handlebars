@@ -1,0 +1,64 @@
+<div class="col">
+    <h2>    Make Changes to Your Inventory  </h2>
+
+  <form class="editInventoryForm">
+      <div>
+        <label for="persMan1" class="h5">Manufacturer</label>
+        <input  id="persMan" name="persMan" value="{{personal.manufacturer}}" type="text">
+    </div>
+    <div>
+        <label for="persMod2"class="h5">Model</label>
+        <textarea class="textarea"  id="persMod" name="persMod" value="{{personal.model}}" type="text">{{personal.model}}</textarea>
+   </div>
+
+    <div>
+        <label for="persTyp3" class="h5">Type id</label>
+        <input  id="persTyp" name="persTyp" value="{{personal.type_id}}" type="text">
+    </div>
+    <div>
+        <label for="persSer4"class="h5">Serial Number</label>
+        <input  id="persSer" name="persSer" value="{{personal.serial_number}}" type="text">
+    </div>
+
+    <div>
+        <label for="persCal5" class="h5">Caliber</label>
+        <input  id="persCal" name="persCal" value="{{personal.caliber}}" type="text">
+    </div>
+    <div>
+        <label for="persBar6"class="h5">Barrel length</label>
+        <input  id="persBar" name="persBar" value="{{personal.barrel_len}}" type="text">
+    </div>
+
+    <div>
+        <label for="persAct7" class="h5">Action</label>
+        <input  id="persAct" name="persAct" value="{{personal.action}}" type="text">
+    </div>
+    <div>
+        <label for="persPur8"class="h5">Purchase Date</label>
+        <input  id="persPur" name="persPur" value="{{personal.purchase_date}}" type="text">
+    </div>
+    <div>
+        <label for="persSlo9"class="h5">Storage Location</label>
+        <input  id="persSlo" name="persSlo" value="{{personal.sloc}}" type="text">
+    </div>
+    <div>
+        <label for="persCos" class="h5">Cost</label>
+        <input  id="persCos" name="persCos" value="{{personal.cost}}" type="text">
+    </div>
+    <div>
+        <label for="persUse"class="h5">User id</label>
+        <input  id="persUse" name="persUse" value="{{personal.user_id}}" type="text">
+    </div>
+
+    <div>
+      <button type="submit" class="btn btn-success">Make Changes</button>
+      <a id="cancelchanges" href="/mysafe" role="button" class="btn btn-warning">Cancel Changes</a>
+            <button type="submit" post-id="{{personal.id}}" class="btn btn-danger deletePostForm">Delete/Remove Gun</button>
+    </div> 
+           
+    {{!-- <div class="form-group">
+        Blog Post Date: {{format_date post.created_at}}
+       <a href="/post/{{post.id}}">{{post.comment.length}} comments of {{format_plural "comment" post.comment.length}}</a>
+
+     </div> --}}
+  </form>

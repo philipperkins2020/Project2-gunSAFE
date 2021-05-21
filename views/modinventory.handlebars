@@ -1,0 +1,29 @@
+<h2>Modify Inventory</h2>
+<div class="card" style= "width: 22rem">
+      <img src="./images/OpenSafe.jpg" class="card-img-top" alt="an open gun safe">
+      <div class="card-body">
+        <h5 class="card-title">Modify Inventory</h5>
+        <p class="card-text">{{user.username}}'s Safe</p>
+      </div>
+      <ul class="list-group list-group-flush">
+
+      <h4>My Inventory</h4>
+        {{#if user.personals.length}}
+          {{#each user.personals as |personal| }}
+         <a href="/modinventory/editinventory/{{personal.id}}" class="editInventory"><button class="btn btn-warning mb-2"></button>{{personal.manufacturer}} {{personal.model}}</a>
+        {{/each}}
+        {{else}}
+        <div>
+          <h3>There are no guns in your safe.</h3>
+        </div>
+        {{/if}}
+          
+        
+
+        <li>Click Yellow Buttons To Make Changes</li>
+        
+      </ul>
+   </div>
+  
+
+<script src="/js/mysafe.js"></script>

@@ -1,6 +1,8 @@
 const router = require('express').Router(); 
 const { User, Personal, Catalog } = require('../models');
 const sequelize = require('../config/connection');
+const countapi = require('countapi-js');
+
 
 router.get('/', async (req, res) => {
     try {
@@ -11,9 +13,14 @@ router.get('/', async (req, res) => {
 
         const firearms = catalogData.map((firearm) => firearm.get({ plain: true }));
         console.log(firearms);
-        res.render('homepage', {
-            firearms,
-            logged_in: req.session.logged_in,
+
+        countapi.visits().then((result) => {
+                console.log(result.value);
+            res.render('homepage', {
+                firearms,
+                visited: result.value,
+                logged_in: req.session.logged_in,
+            });
         });
     } catch (err) {
         res.status(500).json(err);
