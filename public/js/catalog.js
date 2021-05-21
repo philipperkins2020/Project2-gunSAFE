@@ -8,17 +8,10 @@ const catalogSearch = async (event) => {
 
 
     if (type && action && caliber) {
-        // const response = await fetch(`/catalog/${type}/${action}/${caliber}`, {
-        //     method: 'GET',
-        //     headers: { 'Content-Type': 'application/json' },
-        // });
         document.location.replace(`/catalog/${type}/${action}/${caliber}`);
-    } 
-    // if (response.ok) {
-
-    // } else {
-    //     alert(response.statusText);
-    // }
+    } else {
+        alert(response.statusText);
+    }
 };
 
 document.querySelector('.catalog-search-form').addEventListener('submit', catalogSearch);

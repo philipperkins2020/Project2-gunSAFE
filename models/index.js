@@ -19,6 +19,10 @@ Personal.belongsTo(Category, {
     foreignKey: 'type_id'
 });
 
+// Personal.belongsTo(Catalog, {
+//     foreignKey: 'ITEMNO'
+// });
+
 // Catalog.belongsTo(Category,  {
 //     foreignKey: 'category_name'
 // });
