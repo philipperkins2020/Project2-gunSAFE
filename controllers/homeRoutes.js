@@ -1,11 +1,25 @@
 const router = require("express").Router();
+const { User, Personal, Catalog } = require("../models");
+const sequelize = require("../config/connection");
+const countapi = require("countapi-js");
 
-const { User, Personal } = require("../models");
-
-router.get("/", (req, res) => {
+router.get("/", async (req, res) => {
   try {
-    res.render("homepage", {
-      // logged_in: req.seesion.logged_in,
+    const catalogData = await Catalog.findAll({
+      order: sequelize.random(),
+      limit: 4,
+    });
+
+    const firearms = catalogData.map((firearm) => firearm.get({ plain: true }));
+    console.log(firearms);
+
+    countapi.visits().then((result) => {
+      console.log(result.value);
+      res.render("homepage", {
+        firearms,
+        visited: result.value,
+        logged_in: req.session.logged_in,
+      });
     });
   } catch (err) {
     res.status(500).json(err);
@@ -43,7 +57,9 @@ router.get("/addinventory", (req, res) => {
     res.redirect("/");
     return;
   }
-  res.render("addinventory");
+  res.render("addinventory", {
+    logged_in: req.session.logged_in,
+  });
 });
 
 router.get("/safety", (req, res) => {

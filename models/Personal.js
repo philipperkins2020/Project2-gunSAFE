@@ -27,8 +27,8 @@ Personal.init(
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
-            model: "category",
-            key: "id",
+            model: 'category',
+            key: 'id',
         },
     },
 
@@ -65,23 +65,31 @@ Personal.init(
     cost: {
       type: DataTypes.DECIMAL(10,2),
       allowNull: true,
-  },
+    },
 
     user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "user",
-        key: "id",
+        model: 'user',
+        key: 'id',
       },
-    }
+    },
+    // ITEMNO: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: true,
+    //   references: {
+    //     table: 'catalog',
+    //     key: 'ITEMNO'
+    //   },
+    // }
   },
   {
     sequelize,
     timestamps: false,
-    // True for freezeTableName will not add an "s" to modelName
+    // True for freezeTableName will not add an 's' to modelName
     freezeTableName: true,
     underscored: true,
-    modelName: "personal",
+    modelName: 'personal',
   }
 );
 
