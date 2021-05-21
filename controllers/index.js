@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const apiRoutes = require('./api');
 const homeRoutes = require('./homeRoutes');
-const mySafeRoutes = require('./mysafeRoutes');
+const mySafeRoutes = require('./mySafeRoutes');
 const catalogRoutes = require('./catalogRoutes');
 const modinvRoutes = require('./modinvRoutes')
 
