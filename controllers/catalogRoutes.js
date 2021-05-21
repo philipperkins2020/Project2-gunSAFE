@@ -6,7 +6,9 @@ router.get('/', async (req, res) => {
 
     try {
 
-        res.render('catalog');
+        res.render('catalog', {
+            logged_in: req.session.logged_in,
+        });
 
     } catch (err) {
         res.status(500).json(err);
@@ -40,6 +42,14 @@ router.get('/:type/:action/:caliber', async (req, res) => {
         console.log(err)
     }
 });
+
+// router.get('/:ITEMNO', async (req, res) => {
+//     try {
+//         const
+//     } catch (err) {
+//         res.status(500).json(err);
+//     }
+// });
 
 
 
