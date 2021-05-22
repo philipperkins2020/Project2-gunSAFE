@@ -93,7 +93,7 @@
 ***
   ## Questions:
   - The GitHub profiles for this project are:
-    - https://github.com/philipperkins2020
+    - https://github.com/Alexva397
     - https://github.com/philipperkins2020
     - https://github.com/BE-Gee
     - https://github.com/djavanw
