@@ -1,29 +1,32 @@
-<h2>Modify Inventory</h2>
-<div class="card" style= "width: 22rem">
-      <img src="./images/OpenSafe.jpg" class="card-img-top" alt="an open gun safe">
-      <div class="card-body">
-        <h5 class="card-title">Modify Inventory</h5>
-        <p class="card-text">{{user.username}}'s Safe</p>
+<div class="row justify-content-evenly">
+    <h2>Modify Inventory</h2>
+    <div class="card col-sm-12 col-md-4" style= "width: 22rem">
+          <img src="./images/OpenSafe.jpg" class="card-img-top" alt="an open gun safe">
+          <div class="card-body">
+            <h5 class="card-title">Modify Inventory</h5>
+            <p class="card-text">{{user.username}}'s Safe</p>
+          </div>
+    </div>
+    <div class="col-sm-12 col-md-8 text-center">
+      <div class="row text-white bg-dark p-2 rounded">
+          <h4>{{user.username}}'s Inventory</h4>
       </div>
-      <ul class="list-group list-group-flush">
 
-      <h4>My Inventory</h4>
-        {{#if user.personals.length}}
-          {{#each user.personals as |personal| }}
-        <a href="/modinventory/editinventory/{{personal.id}}" class="editInventory btn btn-warning mb-2">{{personal.manufacturer}} {{personal.model}}</a>
-        {{/each}}
-        {{else}}
-        <div>
-          <h3>There are no guns in your safe.</h3>
-        </div>
-        {{/if}}
-          
-        
+           <ul class="list-group list-unstyled list-group-flush">
+            {{#if user.personals.length}}
+              {{#each user.personals as |personal| }}
+              <li class="list-group-item">
+                  <a href="/modinventory/editinventory/{{personal.id}}" class="editInventory btn btn-warning mb-2">{{personal.manufacturer}} {{personal.model}}</a>
+              </li>
+            {{/each}}
+            {{else}}
+            <div>
+              <h3>There are no guns in your safe.</h3>
+            </div>
+            {{/if}}
+            <li class="h5 mt-2">Click Yellow Buttons To Make Changes</li>
+          </ul>
+    </div>
+</div>
 
-        <li class="h5">Click Yellow Buttons To Make Changes</li>
-        
-      </ul>
-   </div>
-  
-
-<script src="/js/mysafe.js"></script>
+    <script src="/js/mysafe.js"></script>

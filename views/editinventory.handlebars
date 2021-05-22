@@ -1,61 +1,69 @@
-<div class="col">
-    <h2>    Make Changes to Your Inventory  </h2>
+<div class="row justify-content-center">
+    <div class="card col-10 p-0">
+        <div class="card-header text-white bg-dark">
+            <h2 class="card-title">    Make Changes to Your Inventory  </h2>
+        </div>
+        <div class="card-body">
+            <form class="form editInventoryForm">
+                <div class="form-group">
+                    <div class="row mb-3">
+                        <label for="persMan1"  class="h5 col-sm-2 col-form-label5">Manufacturer</label>
+                        <input  id="persMan" class="form-control" name="persMan" value="{{personal.manufacturer}}" type="text">
+                    </div>
+                    <div class="row mb-3">
+                        <label for="persMod2" class="h5 col-sm-2 col-form-label">Model</label>
+                        <input class="persMod" class="form-control" id="persMod" name="persMod" value="{{personal.model}}" type="text">
+                    </div>
 
-  <form class="editInventoryForm">
-      <div>
-        <label for="persMan1" class="h5">Manufacturer</label>
-        <input  id="persMan" name="persMan" value="{{personal.manufacturer}}" type="text">
-    </div>
-    <div>
-        <label for="persMod2"class="h5">Model</label>
-        <input class="persMod"  id="persMod" name="persMod" value="{{personal.model}}" type="text">
-   </div>
+                    <div class="row mb-3">
+                        <label for="persTyp3"  class="h5 col-sm-2 col-form-label5">Type id</label>
+                        <input  id="persTyp" class="form-control" name="persTyp" value="{{personal.type_id}}" type="text">
+                    </div>
+                    <div class="row mb-3">
+                        <label for="persSer4" class="h5 col-sm-2 col-form-label">Serial Number</label>
+                        <input  id="persSer" class="form-control" name="persSer" value="{{personal.serial_number}}" type="text">
+                    </div>
 
-    <div>
-        <label for="persTyp3" class="h5">Type id</label>
-        <input  id="persTyp" name="persTyp" value="{{personal.type_id}}" type="text">
-    </div>
-    <div>
-        <label for="persSer4"class="h5">Serial Number</label>
-        <input  id="persSer" name="persSer" value="{{personal.serial_number}}" type="text">
-    </div>
+                    <div class="row mb-3">
+                        <label for="persCal5"  class="h5 col-sm-2 col-form-label5">Caliber</label>
+                        <input  id="persCal" class="form-control" name="persCal" value="{{personal.caliber}}" type="text">
+                    </div>
+                    <div class="row mb-3">
+                        <label for="persBar6" class="h5 col-sm-2 col-form-label">Barrel length</label>
+                        <input  id="persBar" class="form-control" name="persBar" value="{{personal.barrel_len}}" type="text">
+                    </div>
 
-    <div>
-        <label for="persCal5" class="h5">Caliber</label>
-        <input  id="persCal" name="persCal" value="{{personal.caliber}}" type="text">
-    </div>
-    <div>
-        <label for="persBar6"class="h5">Barrel length</label>
-        <input  id="persBar" name="persBar" value="{{personal.barrel_len}}" type="text">
-    </div>
+                    <div class="row mb-3">
+                        <label for="persAct7"  class="h5 col-sm-2 col-form-label5">Action</label>
+                        <input  id="persAct" class="form-control" name="persAct" value="{{personal.action}}" type="text">
+                    </div>
+                    <div class="row mb-3">
+                        <label for="persPur8" class="h5 col-sm-2 col-form-label">Purchase Date</label>
+                        <input  id="persPur" class="form-control" name="persPur" value="{{personal.purchase_date}}" type="text">
+                    </div>
+                    <div class="row mb-3">
+                        <label for="persSlo9" class="h5 col-sm-2 col-form-label">Storage Location</label>
+                        <input  id="persSlo" class="form-control" name="persSlo" value="{{personal.sloc}}" type="text">
+                    </div>
+                    <div class="row mb-3">
+                        <label for="persCos"  class="h5 col-sm-2 col-form-label5">Cost</label>
+                        <input  id="persCos" class="form-control" name="persCos" value="{{personal.cost}}" type="text">
+                    </div>
+                    {{!-- <div>
+                        <label for="persUse"class="h5">User id</label>
+                        <input  id="persUse" name="persUse" value="{{personal.user_id}}" type="text">
+                    </div> --}}
 
-    <div>
-        <label for="persAct7" class="h5">Action</label>
-        <input  id="persAct" name="persAct" value="{{personal.action}}" type="text">
+                    <div class="my-3">
+                        <button type="submit" class="btn btn-success">Make Changes</button>
+                        <a id="cancelchanges" href="/mysafe" role="button" class="btn btn-warning">Cancel Changes</a>
+                        <button type="submit" id="deleteForm" post-id="{{personal.id}}" class="btn btn-danger deletePostForm">Delete/Remove Gun</button>
+                    </div> 
+                </div>
+            </form>  
+        </div>
     </div>
-    <div>
-        <label for="persPur8"class="h5">Purchase Date</label>
-        <input  id="persPur" name="persPur" value="{{personal.purchase_date}}" type="text">
-    </div>
-    <div>
-        <label for="persSlo9"class="h5">Storage Location</label>
-        <input  id="persSlo" name="persSlo" value="{{personal.sloc}}" type="text">
-    </div>
-    <div>
-        <label for="persCos" class="h5">Cost</label>
-        <input  id="persCos" name="persCos" value="{{personal.cost}}" type="text">
-    </div>
-    {{!-- <div>
-        <label for="persUse"class="h5">User id</label>
-        <input  id="persUse" name="persUse" value="{{personal.user_id}}" type="text">
-    </div> --}}
-
-    <div>
-        <button type="submit" class="btn btn-success">Make Changes</button>
-        <a id="cancelchanges" href="/mysafe" role="button" class="btn btn-warning">Cancel Changes</a>
-        <button type="submit" id="deleteForm" post-id="{{personal.id}}" class="btn btn-danger deletePostForm">Delete/Remove Gun</button>
-    </div> 
-  </form>  
+</div>
 
     <script src="/js/editinventory.js"></script>
     <script src="/js/deleteinventory.js"></script>

@@ -1,6 +1,6 @@
 <div class="row align-items-start justify-content-evenly">
-  <div class="col-4">
-    <h1 style="text-align: center;">Gun Safety articles</h1>
+  <div class="col-sm-12 col-md-4">
+    <h1 class="text-center">Gun Safety articles</h1>
 
     <div class="list-group">
       <a href="https://www.healthychildren.org/English/safety-prevention/at-home/Pages/Handguns-in-the-Home.aspx"
@@ -32,7 +32,7 @@
     </div>
 
   </div>
-  <div class="col-4 text-center">
+  <div class="col-sm-12 col-md-4 text-center">
 
     <div class="card border border-dark text-center">
 
@@ -51,8 +51,8 @@
 
 
   </div>
-  <div class="col-4">
-    <h1 style=" text-align: center;">Gun Maintenance articles</h1>
+  <div class="col-sm-12 col-md-4">
+    <h1 class="text-center">Gun Maintenance articles</h1>
 
     <div class="list-group">
       <a href="https://www.nrablog.com/articles/2017/4/regular-gun-maintenance-can-help-produce-longer-running-safer-firearms"
@@ -97,7 +97,7 @@
   </div>
   <div class="row justify-content-evenly mb-2">
     {{#each firearms as |firearm|}}
-    <div class="card col-2 m-1 text-center">
+    <div class="card col-sm-6 col-md-2 m-1 text-center">
       <img src="https://www.lipseyscloud.com/images/{{firearm.IMAGENAME}}" class="card-img-top mt-2" alt="random firearm">
       <div class="card-body">
         <h5 class="card-title">{{firearm.MANUFACTURER}} {{firearm.MODEL}}</h5>
