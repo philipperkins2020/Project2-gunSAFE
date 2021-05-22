@@ -1,69 +1,78 @@
+<div class="row justify-content-evenly">
+  <div class="card col-4" style="width: 22rem">
+    <img src="./images/safe.png" class="card-img-top" alt="...">
+    <div class="card-body text-center">
+      <h2 class="card-title">mySAFE</h2>
+    </div>
+  </div>
+  <div class="col-8 text-center">
 
-  <div class="row justify-content-center">
-    <div class="card" style= "width: 22rem">
-      <img src="./images/safe.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">mySafe</h5>
-        <p class="card-text">{{user.username}}'s Safe</p>
-      </div>
-      <ul class="list-group list-group-flush">
 
-      <h4>My Inventory</h4>
-        {{#if user.personals.length}}
-          {{#each user.personals as |personal| }}
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#firearmModal{{personal.id}}">
-          {{personal.manufacturer}} {{personal.model}}
-        </button>
+    <div class="row text-white bg-dark p-2 rounded">
+      <h3>{{user.username}}'s Safe</h3>
+    </div>
+    <ul class="list-group list-group-flush">
+    {{#if user.personals.length}}
+    {{#each user.personals as |personal| }}
+    <!-- Button trigger modal -->
+    <li class="list-group-item">
+      <button type="button" class="btn btn-primary m-2" data-bs-toggle="modal"
+        data-bs-target="#firearmModal{{personal.id}}">
+        {{personal.manufacturer}} {{personal.model}}
+      </button>
+    </li>
 
-<!-- Modal -->
-<div class="modal fade" id="firearmModal{{personal.id}}" tabindex="-1" aria-labelledby="firearmModal{{personal.id}}Label" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="firearmModal{{personal.id}}Label">{{personal.manufacturer}} {{personal.model}}</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p><strong>Serial Number: </strong>{{personal.serial_number}}</p>
-        <p><strong>Caliber: </strong>{{personal.caliber}}</p>
-        <p><strong>Barrel Length: </strong>{{personal.barrel_len}}</p>
-        <p><strong>Action: </strong>{{personal.action}}</p>
-        <p><strong>Storage Location: </strong>{{personal.sloc}}</p>
-        <p><strong>Cost: </strong>$ {{personal.cost}}</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        {{!-- <button type="button" class="btn btn-primary">Save changes</button> --}}
+    <!-- Modal -->
+    <div class="modal fade" id="firearmModal{{personal.id}}" tabindex="-1"
+      aria-labelledby="firearmModal{{personal.id}}Label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="firearmModal{{personal.id}}Label">{{personal.manufacturer}} {{personal.model}}
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p><strong>Serial Number: </strong>{{personal.serial_number}}</p>
+            <p><strong>Caliber: </strong>{{personal.caliber}}</p>
+            <p><strong>Barrel Length: </strong>{{personal.barrel_len}}</p>
+            <p><strong>Action: </strong>{{personal.action}}</p>
+            <p><strong>Storage Location: </strong>{{personal.sloc}}</p>
+            <p><strong>Cost: </strong>$ {{personal.cost}}</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            {{!-- <button type="button" class="btn btn-primary">Save changes</button> --}}
+          </div>
+        </div>
       </div>
     </div>
+
+    {{/each}}
+    {{else}}
+    <div>
+      <h3>You don't have any firearms in your safe.</h3>
+    </div>
+    {{/if}}
+
+
+
+
+  </div>
+</div>
+<div class="row justify-content-center mt-4">
+  <div class="col-4 text-center">
+    <a class="btn btn-primary fs-5" href="/catalog" role="button">Gun Catalog</a>
+  </div>
+  <div class="col-4 text-center">
+    <a class="btn btn-success fs-5" href="/addinventory" role="button" id="addInventory">Add Inventory</a>
+  </div>
+  <div class="col-4 text-center">
+    <a class="btn btn-warning fs-5" href="/modinventory" role="button" id="modInventory">Modify Inventory</a>
   </div>
 </div>
 
-        {{/each}}
-        {{else}}
-        <div>
-          <h3>You don't have any firearms in your safe.</h3>
-        </div>
-        {{/if}}
-      
-  
-        
-        
-        </li>
-        <li class="list-group-item"><a class="btn btn-primary fs-5" href="/catalog" role="button">Gun Catalog</a></li>
-        <li class="list-group-item"><a class="btn btn-primary fs-5" href="/addinventory" role="button" id="addInventory">Add Inventory</a></li>
-        <li class="list-group-item"><a class="btn btn-primary fs-5" href="/modinventory" role="button" id="modInventory">Modify Inventory</a></li>
-      </ul>
-   </div>
-  </div>
+
+
 
 <script src="/js/mysafe.js"></script>
-{{!-- 
-          <p><strong>Serial Number: </strong>{{personal.serial_number}}</p>
-                <p><strong>Caliber: </strong>{{personal.caliber}}</p>
-                <p><strong>Barrel Length: </strong>{{personal.barrel_len}}</p>
-                <p><strong>Action: </strong>{{personal.action}}</p>
-
-                {{#if user.personals.length}}
-      {{#each user.personals as |personal| }} --}}

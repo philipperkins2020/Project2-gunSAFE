@@ -34,7 +34,7 @@ router.get('/:type/:action/:caliber', async (req, res) => {
 
         res.render('catalog', {
             firearm,
-            logged_in: req.params.logged_in
+            logged_in: req.session.logged_in,
         });
 
     } catch (err) {
@@ -43,14 +43,21 @@ router.get('/:type/:action/:caliber', async (req, res) => {
     }
 });
 
-// router.get('/:ITEMNO', async (req, res) => {
-//     try {
-//         const
-//     } catch (err) {
-//         res.status(500).json(err);
-//     }
-// });
+router.get('/:ITEMNO', async (req, res) => {
+    try {
+        const firearmData = await Catalog.findByPk(req.params.ITEMNO);
 
+        const firearm = firearmData.get({ plain: true });
+        console.log(firearm);
+        
+        res.render('firearm', {
+            firearm,
+            logged_in: req.session.logged_in,
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
 
 
 module.exports = router;
