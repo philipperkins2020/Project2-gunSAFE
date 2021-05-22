@@ -22,14 +22,14 @@
                     <select class="form-select form-select-lg mb-3" id="firearmAction" aria-label=".form-select-lg example">
                         <option selected>select a firearm action..</option>
                         <option>Single Action</option>
-                        <option >Lever Action</option>
+                        <option>Lever Action</option>
                         <option>Single Shot</option>
                         <option>Pump Action</option>
                         <option>Bolt Action</option>
                         <option>Semi-Auto</option>
-                        <option>Over / Under</option>
+                        <option>Over | Under</option>
                         <option>Double Action Only</option>
-                        <option>Double / Single Action</option>
+                        <option>Double | Single Action</option>
                         <option>Striker Fired</option>
                         <option>Safe Action</option>
                         <option>Side By Side</option>
@@ -108,6 +108,7 @@
             <div class="card-body">
                 <h5 class="card-title">{{firearm.MANUFACTURER}} {{firearm.MODEL}}</h5>
                 <p class="card-text"><strong>Manufacturer Model Number: </strong>{{firearm.MANUFACTURERMODELNO}}</p>
+                <a href="/catalog/{{firearm.ITEMNO}}" class="card-link">View this firearm</a>
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item"><strong>Caliber: </strong>{{firearm.CALIBERGAUGE}}</li>
@@ -121,5 +122,3 @@
 
 
 <script src="/js/catalog.js"></script>
-
-{{!-- style="width: 20px; height: 20px;" --}}

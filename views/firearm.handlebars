@@ -1,0 +1,20 @@
+<div class="row justify-content-center">
+    <div class="card p-0 col-8  border border-dark rounded">
+        <img src="https://www.lipseyscloud.com/images/{{firearm.IMAGENAME}}" class="card-img-top" alt="random firearm">
+        <div class="card-header text-white bg-dark">
+            <h3 class="card-title">{{firearm.MANUFACTURER}} {{firearm.MODEL}}</h3>
+        </div>
+        <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Manufacturer Model #: </strong>{{firearm.MANUFACTURERMODELNO}}</li>
+                <li class="list-group-item"><strong>MSRP: </strong>${{firearm.MSRP}}</li>
+                <li class="list-group-item"><strong>Type: </strong>{{firearm.TYPE}}</li>
+                <li class="list-group-item"><strong>Action: </strong>{{firearm.ACTION}}</li>
+                <li class="list-group-item"><strong>Barrel Length: </strong>{{firearm.BARRELLENGTH}}</li>
+                <li class="list-group-item"><strong>Caliber/Gauge: </strong>{{firearm.CALIBERGAUGE}}</li>
+                <li class="list-group-item"><strong>Overall Length: </strong>{{firearm.OVERALLLENGTH}}</li>
+        </ul>
+        <div class="card-body">
+            <a href="/catalog" class="card-link btn btn-primary">View Other Firearms</a>
+        </div>
+    </div>
+</div>
