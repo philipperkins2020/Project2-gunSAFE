@@ -1,9 +1,9 @@
-const router = require("express").Router();
-const { User, Personal, Catalog } = require("../models");
-const sequelize = require("../config/connection");
-const countapi = require("countapi-js");
+const router = require('express').Router();
+const { User, Personal, Catalog } = require('../models');
+const sequelize = require('../config/connection');
+const countapi = require('countapi-js');
 
-router.get("/", async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const catalogData = await Catalog.findAll({
       order: sequelize.random(),
@@ -15,7 +15,7 @@ router.get("/", async (req, res) => {
 
     countapi.visits().then((result) => {
       console.log(result.value);
-      res.render("homepage", {
+      res.render('homepage', {
         firearms,
         visited: result.value,
         logged_in: req.session.logged_in,
@@ -26,45 +26,47 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/login", (req, res) => {
+router.get('/login', (req, res) => {
   if (req.session.logged_in) {
-    res.redirect("/mysafe");
+    res.redirect('/mysafe');
     return;
   }
-  res.render("login");
+  res.render('login');
 });
 
-router.get("/newuser", (req, res) => {
+router.get('/newuser', (req, res) => {
   if (req.session.logged_in) {
-    res.redirect("/mySafe");
+    res.redirect('/mySafe');
     return;
   }
-  res.render("newuser");
+  res.render('newuser');
 });
 
-router.get("/logout", (req, res) => {
+router.get('/logout', (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {
-      res.status(204).redirect("/");
+      res.status(204).redirect('/');
     });
   } else {
-    res.status(204).redirect("/");
+    res.status(204).redirect('/');
   }
 });
 
-router.get("/addinventory", (req, res) => {
+router.get('/addinventory', (req, res) => {
   if (!req.session.logged_in) {
-    res.redirect("/");
+    res.redirect('/');
     return;
   }
-  res.render("addinventory", {
+  res.render('addinventory', {
     logged_in: req.session.logged_in,
   });
 });
 
-router.get("/safety", (req, res) => {
+router.get('/safety', (req, res) => {
   try {
-    res.render("safety");
+    res.render('safety', {
+        logged_in: req.session.logged_in,
+    });
   } catch (err) {
     res.status(500).json(err);
   }

@@ -54,9 +54,3 @@ router.get('/:type/:action/:caliber', async (req, res) => {
 
 
 module.exports = router;
-
-
-
-    // TYPE: req.params.TYPE,
-    // CALIBERGAUGE: req.body.CALIBERGAUGE,
-    // ACTION: req.body.ACTION
