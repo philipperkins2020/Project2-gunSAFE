@@ -31,25 +31,28 @@
 ***
   ## Screenshots:
   ### (Deployed Application)
-  ![Deployed Application](./public/images/gunsafe_deployed.jpeg)
+  ![Deployed Application](./public/images/website_homepage.jpeg)
+
+  ### (User Login)
+  ![User Login](./public/images/login_deployed.jpeg)
 
   ### (User Inventory)
-  ![User Inventory List](./public/images/my_inventory.jpeg)
+  ![User Inventory List](./public/images/user_inventory.jpeg)
 
   ### (Reviewing Inventory)
   ![Reviewing Inventory](./public/images/review_inventory.jpeg)
 
   ### (Adding Inventory)
-  ![Adding Inventory](./public/images/entering_inventory.jpeg)
+  ![Adding Inventory](./public/images/enter_inventory.jpeg)
 
   ### (New Inventory)
   ![New Inventory](./public/images/new_inventory.jpeg)
 
   ### (Catalog Search)
-  ![Catalog Search](./public/images/catalog.jpeg)
+  ![Catalog Search](./public/images/catalog_search.jpeg)
 
-  ### (Catalog Search Results)
-  ![Catalog Search Results](./public/images/catalog_search_results.jpg)
+  ### (Gun Safety)
+  ![Safety](./public/images/safety.jpeg)
 
 ***
   ## Technologies
