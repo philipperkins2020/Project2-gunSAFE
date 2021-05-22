@@ -12,7 +12,7 @@ const deleteProcess = async  (event) => {
       });
     
     if (response.ok) {
-        document.location.replace('/mysafe');
+        document.location.replace('/modinventory');
         // document.location.href="/dashboard";
         // Error message
         } else {
@@ -21,4 +21,4 @@ const deleteProcess = async  (event) => {
 
   }
   
-  document.querySelector(".deletePostForm").addEventListener('click', deleteProcess);
+  document.getElementById('deleteForm').addEventListener('click', deleteProcess);
