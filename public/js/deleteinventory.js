@@ -21,4 +21,4 @@ const deleteProcess = async  (event) => {
 
   }
   
-  document.querySelector(".deleteInventoryForm").addEventListener('click', deleteProcess);
+  document.querySelector(".deletePostForm").addEventListener('click', deleteProcess);

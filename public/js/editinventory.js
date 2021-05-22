@@ -15,7 +15,7 @@ const editProcess = async  (event) => {
     const sloc = document.querySelector("#persSlo").value.trim();
     
     const cost = document.querySelector("#persCos").value.trim();
-    const user_id = document.querySelector("#persUse").value.trim();
+    // const user_id = document.querySelector("#persUse").value.trim();
 
     const id = window.location.toString().split('/') [
         window.location.toString().split('/').length - 1
@@ -34,14 +34,15 @@ const editProcess = async  (event) => {
                               purchase_date,
                               sloc,
                               cost,
-                              user_id,
+                              // user_id,
                               }),
         headers: { 'Content-Type': 'application/json' }
       });
     
     if (response.ok) {
-        document.location.replace('/mysafe');
-        // document.location.href="/dashboard";
+        document.location.replace('/modinventory');
+        // document.location.href="/modinventory";
+       
         // otherwise, display the error
         } else {
         alert(response.statusText);
@@ -50,3 +51,4 @@ const editProcess = async  (event) => {
   }
   
   document.querySelector(".editInventoryForm").addEventListener('submit', editProcess);
+ 

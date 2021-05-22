@@ -1,4 +1,4 @@
-# Project Two:  gunSafe
+# Project Two:  gunSAFE
 
   [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://choosealicense.com/licenses/mit/)
 
@@ -22,7 +22,7 @@
 
 ***
   ## Demonstration:
-  [Deployed website link](https://dashboard.heroku.com/apps/powerful-bastion-48444)
+  [Deployed website link](https://powerful-bastion-48444.herokuapp.com/)
 
 ***
   ## Installation:
@@ -63,7 +63,7 @@
     - Countapi-js 
 
   ## Usage:
-  XXXXXX   This application utilizes several web and database technologies that allows a user to read technology blogs from other users and comment on blogs or write their own after signing up for access to the website.  A MySQL database is used to store user and blog post data.  The website has a secure authentication process to access the website for both current and new users.  This is an interactive website that allows the users to write new blogs, edit and delete their own blogs, view other user’s blogs, and make comments.  As stated earlier, a MySQL database manages the data, so the user does not have to work about the blog post being erased.  XXXXXXXXX
+  This application utilizes several web and database technologies that allows a user to review gun safety articles, broswse guns on an electronic catalog, and store and retrieve a personal gun inventory.  The gun inventory is entered by the user and the application will save the information for later use.  The user gains all of this functionality when he/she is logged into the application.  A MySQL database is used to store user informatio, the users inventory, and the gun catalog.  The website has a secure authentication process to access the website for both current and new users.  
    
 ***
   ## License:
@@ -92,6 +92,10 @@
 
 ***
   ## Questions:
-  - The GitHub profile for this project is https://github.com/djavanw/technology_blog.
+  - The GitHub profiles for this project are:
+    - https://github.com/philipperkins2020
+    - https://github.com/philipperkins2020
+    - https://github.com/BE-Gee
+    - https://github.com/djavanw
  
-  - If there are any questions, the contributor can be reached at fakemail@qmail.us.com.
+  - If there are any questions, please contact Alex at asvadeboncoeur@gmail.com.
