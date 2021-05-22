@@ -10,7 +10,7 @@
       <h4>My Inventory</h4>
         {{#if user.personals.length}}
           {{#each user.personals as |personal| }}
-         <a href="/modinventory/editinventory/{{personal.id}}" class="editInventory"><button class="btn btn-warning mb-2"></button>{{personal.manufacturer}} {{personal.model}}</a>
+        <a href="/modinventory/editinventory/{{personal.id}}" class="editInventory btn btn-warning mb-2">{{personal.manufacturer}} {{personal.model}}</a>
         {{/each}}
         {{else}}
         <div>
@@ -20,7 +20,7 @@
           
         
 
-        <li>Click Yellow Buttons To Make Changes</li>
+        <li class="h5">Click Yellow Buttons To Make Changes</li>
         
       </ul>
    </div>

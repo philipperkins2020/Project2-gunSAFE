@@ -8,7 +8,7 @@
     </div>
     <div>
         <label for="persMod2"class="h5">Model</label>
-        <textarea class="textarea"  id="persMod" name="persMod" value="{{personal.model}}" type="text">{{personal.model}}</textarea>
+        <input class="persMod"  id="persMod" name="persMod" value="{{personal.model}}" type="text">
    </div>
 
     <div>
@@ -45,20 +45,17 @@
         <label for="persCos" class="h5">Cost</label>
         <input  id="persCos" name="persCos" value="{{personal.cost}}" type="text">
     </div>
-    <div>
+    {{!-- <div>
         <label for="persUse"class="h5">User id</label>
         <input  id="persUse" name="persUse" value="{{personal.user_id}}" type="text">
-    </div>
+    </div> --}}
 
     <div>
-      <button type="submit" class="btn btn-success">Make Changes</button>
-      <a id="cancelchanges" href="/mysafe" role="button" class="btn btn-warning">Cancel Changes</a>
-            <button type="submit" post-id="{{personal.id}}" class="btn btn-danger deletePostForm">Delete/Remove Gun</button>
+        <button type="submit" class="btn btn-success">Make Changes</button>
+        <a id="cancelchanges" href="/mysafe" role="button" class="btn btn-warning">Cancel Changes</a>
+        <button type="submit" id="deleteForm" post-id="{{personal.id}}" class="btn btn-danger deletePostForm">Delete/Remove Gun</button>
     </div> 
-           
-    {{!-- <div class="form-group">
-        Blog Post Date: {{format_date post.created_at}}
-       <a href="/post/{{post.id}}">{{post.comment.length}} comments of {{format_plural "comment" post.comment.length}}</a>
+  </form>  
 
-     </div> --}}
-  </form>
+    <script src="/js/editinventory.js"></script>
+    <script src="js/deleteinventory.js"</script>

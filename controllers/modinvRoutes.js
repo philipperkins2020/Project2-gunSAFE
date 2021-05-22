@@ -26,7 +26,7 @@ router.get('/', withAuth, async (req, res) => {
 router.get("/editinventory/:id", withAuth, async (req, res) => {
     try {
         const persData = await Personal.findByPk(req.params.id, {
-            attributes: ["id", 
+            attributes: ["id",
                         "manufacturer", 
                         "model", 
                         "type_id",
@@ -48,9 +48,9 @@ router.get("/editinventory/:id", withAuth, async (req, res) => {
             ],
         });
 
-        const post = persData.get({ plain: true });
+        const personal = persData.get({ plain: true });
 
-        res.render("editinventory", { post, logged_in: req.session.logged_in });
+        res.render("editinventory", { personal, logged_in: req.session.logged_in });
     } catch (err) {
         res.status(500).json(err);
     }
